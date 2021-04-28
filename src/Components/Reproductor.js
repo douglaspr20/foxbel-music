@@ -8,7 +8,7 @@ import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
 import Slider from '@material-ui/core/Slider';
-import VolumeUp from '@material-ui/icons/VolumeUp';
+import VolumeMuteIcon from '@material-ui/icons/VolumeMute';
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
@@ -56,7 +56,7 @@ const Reproductor = () => {
           <Slider color="secondary" value={value} onChange={handleChange} aria-labelledby="continuous-slider" />
           </div>
           <IconButton edge="end" color="inherit">
-            <VolumeUp fontSize="small"/>
+            <VolumeMuteIcon fontSize="large"/>
           </IconButton>
         </Toolbar>
       </AppBar>
