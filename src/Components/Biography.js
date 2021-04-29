@@ -92,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Biography = () => {
   const classes = useStyles();
-  const { tracks, artist } = useContext(TrackContext);
+  const { tracks, artist, playTrack } = useContext(TrackContext);
 
 
   if (!tracks || !artist) return null;
@@ -128,7 +128,7 @@ const Biography = () => {
       </Typography>
 
       <CardActions className={classes.buttonsContainer}>
-        <Button className={classes.btnPlay} variant="contained" color="primary">
+        <Button className={classes.btnPlay} variant="contained" color="primary"  onClick={() => playTrack(tracks[0])}>
           Reproducir
         </Button>
         <Button className={classes.btnFollow} >
@@ -139,7 +139,7 @@ const Biography = () => {
         </IconButton>
       </CardActions>
 
-      <IconButton aria-label="Add List" className={classes.playIconContainer} >
+      <IconButton aria-label="Add List" className={classes.playIconContainer} onClick={() => playTrack(tracks[0])}>
         <PlayArrowIcon className={classes.icon} />
       </IconButton>
     </Card>

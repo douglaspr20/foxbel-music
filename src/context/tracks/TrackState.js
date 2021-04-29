@@ -2,13 +2,14 @@ import React, { useReducer } from 'react';
 import TrackReducer from './TrackReducer';
 import TrackContext from './TrackContext';
 import axios from 'axios';
-import { GET_TRACKS, GET_ARTIST } from '../types'
+import { GET_TRACKS, GET_ARTIST, PLAY_TRACK } from '../types'
 
 const TrackState = (props) => {
 
     const initialState = {
         tracks: [],
-        artist: null
+        artist: null,
+        trackPlay: null,
     }
 
     const [state, dispatch] = useReducer(TrackReducer, initialState)
@@ -49,11 +50,21 @@ const TrackState = (props) => {
 
     }
 
+    const playTrack = (track) => {
+        console.log(track)
+        dispatch({
+            type: PLAY_TRACK,
+            payload: track
+        })
+    }
+
     return (
         <TrackContext.Provider value={{
             tracks: state.tracks,
             artist: state.artist,
-            getTracks
+            getTracks,
+            playTrack,
+            trackPlay: state.trackPlay
         }}>
             {props.children}
         </TrackContext.Provider>

@@ -1,4 +1,4 @@
-import {GET_TRACKS, GET_ARTIST} from '../types'; 
+import {GET_TRACKS, GET_ARTIST, PLAY_TRACK} from '../types'; 
 
 const TrackReducer = (state, action) => {
     switch (action.type) {
@@ -11,6 +11,11 @@ const TrackReducer = (state, action) => {
                 return {
                    ...state,
                    artist: action.payload 
+                }
+            case PLAY_TRACK:
+                return {
+                    ...state,
+                    trackPlay: action.payload
                 }
         default:
             return state

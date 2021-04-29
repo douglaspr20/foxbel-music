@@ -62,7 +62,7 @@ const useStyles = makeStyles({
 });
 
 const Results = () => {
-    const { tracks } = useContext(TrackContext)
+    const { tracks, playTrack } = useContext(TrackContext)
 
     const classes = useStyles();
 
@@ -102,7 +102,7 @@ const Results = () => {
                                         </Typography>
                                     </CardContent>
                                 </div>
-                                    <IconButton aria-label="Add List" className={classes.playIconContainer} onClick={() => console.log(track)}>
+                                    <IconButton aria-label="Add List" className={classes.playIconContainer} onClick={() => playTrack(track)}>
                                         <PlayArrowIcon className={classes.icon} />
                                     </IconButton>
 
