@@ -117,7 +117,7 @@ const MainScreen = () => {
       <AppBar
         position="absolute"
         className={clsx(classes.appBar, open && classes.appBarShift)}
-        color="trasparent"
+        color="inherit"
         style={{boxShadow: 'none'}}
       >
         <Toolbar className={classes.toolbar}>

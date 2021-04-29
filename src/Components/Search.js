@@ -61,7 +61,7 @@ const Search = () => {
       <div className={classes.grow} />
       <PersonIcon color="primary" />
 
-      <Typography color="gray" noWrap>
+      <Typography  noWrap>
         Francisco M
       </Typography>
     </>

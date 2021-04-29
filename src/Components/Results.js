@@ -65,8 +65,6 @@ const Results = () => {
     const { tracks } = useContext(TrackContext)
 
     const classes = useStyles();
-    console.log(tracks)
-
 
     if (tracks.length === 0) {
         return (
@@ -104,7 +102,7 @@ const Results = () => {
                                         </Typography>
                                     </CardContent>
                                 </div>
-                                    <IconButton aria-label="Add List" className={classes.playIconContainer} >
+                                    <IconButton aria-label="Add List" className={classes.playIconContainer} onClick={() => console.log(track)}>
                                         <PlayArrowIcon className={classes.icon} />
                                     </IconButton>
 
